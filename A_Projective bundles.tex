@@ -21,9 +21,9 @@
 
 \renewcommand{\thefootnote}{\fnsymbol{footnote}}
 
-\newcommand\stm[1]{\todo[color=magenta]{#1}}           %%% Sofia
-\newcommand\sti[1]{\todo[inline,color=magenta]{#1}}%% Sofia
-\newcommand\mji[1]{\todo[inline,color=yellow]{#1}}% Minyoung
+\newcommand\stm[1]{\todo[color=magenta]{#1}}          
+\newcommand\sti[1]{\todo[inline,color=magenta]{#1}}
+\newcommand\mji[1]{\todo[inline,color=yellow]{#1}}
 \newcommand{\Ques}[1]{\todo[inline,color=red!50!white]{{\textbf{Question:}#1}}}
 \DeclareRobustCommand{\hlgreen}[1]{{\sethlcolor{green}\hl{#1}}}
 \newcommand*{\fullref}[1]{\hyperref[{#1}]{\ref*{#1}. \nameref*{#1}}} 
@@ -59,14 +59,17 @@
   \address{Department of Mathematics\\ Stockholm University, Albano campus Hus 1, Stockholm, Sweden}
 \email{\url{tirabassi@math.su.se}}
 
+\date{March 1, 2024}
 
-%	  Lddress{TU M\"unchen, Zentrum Mathematik -- M11,  Boltzmannstrchen (Germany)}
-%	\email{laface@ma.tum.de}
-	%\dedicatory{Dedicated to my mother on the occasion of her 50th birthday}
+
+\thanks{All authors contributed equally to this work.}
+
+
 
 \clearpage\maketitle 
 %\thispagestyle{empty}
 %\vspace{.5cm}
+
 \begin{abstract}
 We use Jiang--Pareschi's cohomological rank functions and techniques developed by Caucci and Ito to study syzygies of projective bundles on abelian varieties. Consequently, we generalize and refine Chiantipalli's results regarding property $N_p$ of projective bundles over abelian varieties.
 
@@ -79,7 +82,7 @@ We use Jiang--Pareschi's cohomological rank functions and techniques developed b
 %\setcounter{tocdepth}{1}
 %\tableofcontents
 \section{Introduction}
-%Let $Z$ be a smooth projective variety over $\mathbb{C}$ and $L$ be an ample line bundle on $Z$. history of $N_p^r$, imporatnce of M-regularity, characteristic 0
+
 
 Let $X$ be an abelian variety over the complex number field $\mathbb{C}$. 
 Given $(X,l)$ a polarized abelian variety and an object $\mathcal{F}\in D^b(X)$, Jiang--Pareschi \cite{JiPa2020} and Caucci \cite{Caucci} define the {cohomological rank functions} associated to $\mathcal{F}$ and $l$
@@ -87,7 +90,7 @@ Given $(X,l)$ a polarized abelian variety and an object $\mathcal{F}\in D^b(X)$,
 h^i_{\mathcal{F},l}:\mathbb{Q}\rightarrow\mathbb{Q}^+
 \]
 and use them to introduce certain numerical invariants associated to the polarization $l$. For example, if $\mathcal{\F}=\mathcal{I}_x$ is the ideal sheaf of a point $x\in X$, the \emph{basepoint-freeness threshold} is defined as
-\[\beta(l)\coloneq\inf\{x\in\mathbb{{Q}}^+\:|\:h^1_{\mathcal{I}_x,l}(x)=0\},\] 
+\[\beta(l):=\inf\{x\in\mathbb{{Q}}^+\:|\:h^1_{\mathcal{I}_x,l}(x)=0\},\] 
 and has the following properties:
 \begin{itemize}
     \item $\beta(l)\leq 1$ and $\beta(l)<1$ if and only if all line bundles $L$ with $c_1(L)=l$ are globally generated;
@@ -96,7 +99,7 @@ and has the following properties:
     \item if $\beta(l)<\frac{1}{p+2}$, then, for every $L$ with $c_1(L)=0$, we have that $L$ is very ample and satisfies property $N_p$ (see \cite[Thm. 1.1]{Caucci});
 \end{itemize}
  Our main result is the following.
-\begin{introthm}\label{TheoremA}%[Proposition \ref{prop:ITO} (1)]
+\begin{introthm}\label{TheoremA}
 Let $X$ be an abelian variety of dimension $g$ over the complex number $\mathbb{C}$. Let 
 \[
 0=E_0\subset E_1\subset \cdots \subset E_\mathfrak{r}=E
@@ -125,28 +128,34 @@ Property $N_p^0$ is equivalent to property $N_p$. So, our first main theorem, Th
   
 Projective normality and normal presentation on curves were initially studied by Castelnuova, and later by Mattuck, Fujita and St-Donat. Mark Green united these concepts as special cases of the $N_p$-properties, $p$-th syzygy property for $p\geq 0$,   see \cite{green1984koszul,GreenII,GreenIII}. In particular, Green generalized the result by Castelnuovo, showing that a line bundle of degree at least $2g+1+p$ on a smooth curve of genus $g$ satisfies $N_p$-property. In case of higher dimensional varieties, Ein and Lazarsfeld \cite{EL}, among many others, proved that adjoint linear series associated to a very ample line bundle on a smooth projective variety satisfies the property $N_p$. Park \cite{Park} generalized the result by Ein--Lazarsfeld to projective bundles over smooth projective varieties, under certain hypothesis.
   
-  As for abelian varieties, for an ample line bundle $A$ on an abelian variety,  Lazarsfeld made a conjecture that $A^n$ satisfies $N_p$-properties if $n\geq p+3$ for $p\geq 0$. This conjecture was proved and generalized to property $N_p^r$ by Pareschi \cite{pareschi2000syzygies} in characteristic $0$, where it is shown that $A^n$ satisfies $N_p^r$-property if $n\geq (p+r+3)/(r+1)$. Chintapalli and Iyer \cite{ChiIyer} proved the Pareschi result on property $N_p$ for hyperelliptic varieties, and Chintapalli \cite[Theorem 1.2]{Chi19} extended the result to projective bundles over abelian varieties. %Property $N_p^r$ is introduced in \cite{pareschi2000syzygies} for $p,r\geq 0$,   
-
+  As for abelian varieties, for an ample line bundle $A$ on an abelian variety,  Lazarsfeld made a conjecture that $A^n$ satisfies $N_p$-properties if $n\geq p+3$ for $p\geq 0$. This conjecture was proved and generalized to property $N_p^r$ by Pareschi \cite{pareschi2000syzygies} in characteristic $0$, where it is shown that $A^n$ satisfies $N_p^r$-property if $n\geq (p+r+3)/(r+1)$. Chintapalli and Iyer \cite{ChiIyer} proved the Pareschi result on property $N_p$ for hyperelliptic varieties, and Chintapalli \cite[Theorem 1.2]{Chi19} extended the result to projective bundles over abelian varieties. 
   
- The theory of {\it M-regularity} is introduced and developed by Pareschi and Popa \cite{PP03,PP04,PP11}. Jiang and Pareschi \cite{JiPa2020} extend this notion to a $\mathbb{Q}$-{\it twisted sheaf} $\mathcal{F}\langle x\ell\rangle$ for a coherent sheaf on an abelian variety $X$, where $x$ is a rational number in $\mathbb{Q}$. See \S\ref{sec2.2} for the definitions of M-regularity and $\mathbb{Q}$-twisted sheaves. %See Definition \ref{def2.1} for the definition of M-regularity.
+  
+ The theory of {\it M-regularity} is introduced and developed by Pareschi and Popa \cite{PP03,PP04,PP11}. Jiang and Pareschi \cite{JiPa2020} extend this notion to a $\mathbb{Q}$-{\it twisted sheaf} $\mathcal{F}\langle x\ell\rangle$ for a coherent sheaf on an abelian variety $X$, where $x$ is a rational number in $\mathbb{Q}$. See \S\ref{sec2.2} for the definitions of M-regularity and $\mathbb{Q}$-twisted sheaves. 
   
   The following is our second main theorem.  
- %, Theorem \ref{TheoremC}. %The following is our second main theorem. 
+
 \begin{introthm}[Theorem \ref{thm:5.4}]\label{TheoremC}
 Suppose $(Y,X,\pi)$ as before. 
 Let $A$ be an ample line bundle on $X$ with no base divisor. Let $p\geq 1$.
- If $\mathcal{I}_o\langle \frac{r+1}{p+r+2}c_1(A)\rangle$ is M-regular, then $\mathcal{O}_Y(1)\otimes\pi^*A$ satisfies $N_p^r$-property.  
+ If $\mathcal{I}_o\left\langle \frac{r+1}{p+r+2}c_1(A)\right\rangle$ is M-regular, then $\mathcal{O}_Y(1)\otimes\pi^*A$ satisfies $N_p^r$-property.  
  
- In particular, if $\mathcal{I}_o\langle \frac{1}{p+2}c_1(A)\rangle$ is M-regular, then $\mathcal{O}_Y(1)\otimes\pi^*A$ satisfies $N_p$ property. 
+ In particular, if $\mathcal{I}_o\left\langle \frac{1}{p+2}c_1(A)\right\rangle$ is M-regular, then $\mathcal{O}_Y(1)\otimes\pi^*A$ satisfies $N_p$ property. 
 \end{introthm}
 
 We utilize the work of Ito \cite{Ito22} on the M-regularity of $\mathbb{Q}$-twisted sheaves to prove Theorem \ref{TheoremC}.
+
+   Ito \cite{Ito22} refines results of Pareschi--Popa \cite{PP03,PP11} on global generation and surejectivity of multiplication maps of global sections of coherent sheaves on abelian varieties, using the theory of M-regularity of $\mathbb{Q}$-twisted sheaves. Furthermore, he shows the implication of the M-regularity of a suitable $\mathbb{Q}$-twisted sheaf to property $N_p$ and jet-ampleness for an ample line bundle on abelian varieties. 
+   
+   
 As a corollary of Theorem \ref{TheoremC}, we have the following:
 \begin{introcor}\label{introcor2}
   Let $X$ and abelian varieties, $E$ a vector bundle as in the statement of Theorem \ref{TheoremC}, and $A$ an ample line bundle on $X$. If $n\geq (p+r+2)/(r+1)$, then $\mathcal{O}_Y(1)\otimes\pi^* A^{\otimes n}$ satisfies $N_p^r$ for $r\geq 0$, $p\geq 1$.
   \end{introcor}
+
+  Our Corollary \ref{introcor2} give refined results of Chintapalli, since it implies that $\mathcal{O}_Y(1)\otimes\pi^*A^{\otimes n}$ satisfies $N_p$ for $n\geq p+2$. 
   
- Ito \cite{Ito22} refines results of Pareschi--Popa \cite{PP03,PP11} on global generation and surejectivity of multiplication maps of global sections of coherent sheaves on abelian varieties, using the theory of M-regularity of $\mathbb{Q}$-twisted sheaves. Furthermore, he shows the implication of the M-regularity of a suitable $\mathbb{Q}$-twisted sheaf to property $N_p$ and jet-ampleness for an ample line bundle on abelian varieties. 
+
 
   
   
@@ -159,11 +168,10 @@ As a corollary of Theorem \ref{TheoremC}, we have the following:
   
   
   This paper is organized as follows. In \S\ref{sec2}, we review some necessary definitions and notations. In \S\ref{sec3}, we recall ampleness and conditions for tautological line bundles to satisfy property $N_p^r$. In \S\ref{sec4}, we prove our maint results, Theorem \ref{TheoremA}, Theorem \ref{TheoremC}, and Corollary \ref{introcor2}. In \S\ref{sec5}, we study an application of our results to desingularization of compactified Jacobians.
-%\sti{Sofia's comments are red}
-%\mji{Minyoung's comment are yellow}
+  
 \subsection*{Notation}
 We work on the complex number field $\mathbb{C}$. We use standard notation for abelian varieties. If $X$ is an abelian variety, we denote by $\hat{X}$ its dual abelian variety. Given an element $\alpha\in\hat{X}$, we let $P_\alpha$ be the corresponding line bundle in $\operatorname{Pic}^0(X)$, that is 
-$P_\alpha=\mathscr{P}_{|X\times\{\alpha\}}$, where $\mathscr{P}$ is the reduced Poincar\'e line bundle on $X\times \hat X$. Given a integer $n$, we let $n_X:X\rightarrow X$ be the "multiplication by $n$" map. When $n$ is positive, we denote by $X[n]\coloneqq \operatorname{Ker}n_X$: the group-subscheme of $n$-torsion points of $X$. For every $x\in X$ we let $t_x:X\rightarrow X$ be the map defined by $a\mapsto a+x$. Given a polarization $l$ on $X$, we let $\varphi_l:X\rightarrow \hat{X}$ be the isogeny defined by $x\mapsto t_x^*L\otimes L^{-1}$, where $L$ is an ample line bundle with $c_1(L)=l$. It is a standard fact about abelian varieties that this does not depends from the choice of $L$. We will denote the  kernel of $\varphi_l$ by $K(l)$. The identity element of $X$ is denoted simply by 0.\\ By $D^b(X)$ we denote $D^b(\operatorname{Coh}(X))$, the derived category of the category of coherent sheaves on $X$.
+$P_\alpha=\mathscr{P}_{|X\times\{\alpha\}}$, where $\mathscr{P}$ is the reduced Poincar\'e line bundle on $X\times \hat X$. Throughout this paper, we may use $\alpha$ to indicate $P_\alpha$. Given a integer $n$, we let $n_X:X\rightarrow X$ be the "multiplication by $n$" map. When $n$ is positive, we denote by $X[n]\coloneqq \operatorname{Ker}n_X$: the group-subscheme of $n$-torsion points of $X$. For every $x\in X$ we let $t_x:X\rightarrow X$ be the map defined by $a\mapsto a+x$. Given a polarization $l$ on $X$, we let $\varphi_l:X\rightarrow \hat{X}$ be the isogeny defined by $x\mapsto t_x^*L\otimes L^{-1}$, where $L$ is an ample line bundle with $c_1(L)=l$. It is a standard fact about abelian varieties that this does not depends from the choice of $L$. We will denote the  kernel of $\varphi_l$ by $K(l)$. The identity element of $X$ is denoted simply by 0.\\ By $D^b(X)$ we denote $D^b(\operatorname{Coh}(X))$, the derived category of the category of coherent sheaves on $X$.
 
 \section{Preliminaries}\label{sec2}
 \subsection{Syzygies of projective varieties}\label{sub:N_P}
@@ -174,17 +182,16 @@ invertible sheaf on $Z$. Let $S_L$ be the symmetric algebra over $H^0(Z,L)$. The
 is a finitely generated graded $S_L$-algebra and as such it admits a \textit{minimal free
 resolution} 
 \begin{equation}\label{minalfree}
-E_\bullet = 0\rightarrow\cdots\xrightarrow{f_{p+1}}
-E_p\xrightarrow{f_p}\cdots\xrightarrow{f_2} E_1\xrightarrow{f_1}
-E_0\xrightarrow{f_0}R_L\rightarrow 0
+F_\bullet = 0\rightarrow\cdots\xrightarrow{f_{p+1}}
+F_p\xrightarrow{f_p}\cdots\xrightarrow{f_2} F_1\xrightarrow{f_1}
+F_0\xrightarrow{f_0}R_L\rightarrow 0
 \end{equation}
-with  $E_i\simeq\bigoplus_j S_L(-a_{ij})$, $a_{ij}\in\mathbb  Z_{>0}$.
+with  $F_i\simeq\bigoplus_j S_L(-a_{ij})$, $a_{ij}\in\mathbb  Z_{>0}$.
 Following Green \cite{green1984koszul},  we say that $L$ satisfies
 property $N_p$ for some nonnegative integer $p$, if, in the notations above,
-$$E_0=S_L%\quad\text{when $p\geq 0$},
-$$
+$$F_0=S_L$$
 and
-$$E_i=\oplus S_L(-i-1)\quad 1\leq i\leq p.$$
+$$F_i=\oplus S_L(-i-1)\quad 1\leq i\leq p.$$
 In \cite{pareschi2000syzygies}, Pareschi  extended this by introducing property $N_p^r$, where $r\geq 0$ is an integer which measures how much property $N_p$ fails (that is property $N_p^0$ is equivalent to property $N_p$). More precisely, we say that, $L$ satisfies property $N_p^r$ if, in the notation above, $a_{0j}\leq 1+r$ for
 every $j$. Inductively, we see that property $N_p^r$ holds for $L$ if $L$ satisfies  property $N_{p-1}^r$ and $a_{pj}\leq p+1+r$ for every $j$.\par
  It is well known that condition $N_p$ is equivalent to the exactness in the middle of the complex
@@ -211,11 +218,11 @@ for every integer $m$, and every line bundle $L$ with $c_1(L)=l$. The equivalenc
 $$
 V^i\left(X, \mathcal{F}\left\langle \frac{a}{b}l\right\rangle, L\right)\coloneqq\{  \alpha\in\hat{X}\:|\:h^i(X, b_X^*\mathcal{F}\otimes L^{ab}\otimes P_  \alpha)=0\}.
 $$
-If we change the representative of $l$ we obtain a new locus that is a translate of $V^i\left(X, \mathcal{F}\langle \frac{a}{b}l\rangle, L\right)$ by an element in $\hat{X}$. In particular, the dimension of these loci does not depend from the choice of the line bundle $L$ and we can introduce the following definition.
+If we change the representative of $l$ we obtain a new locus that is a translate of $V^i\left(X, \mathcal{F}\left\langle \frac{a}{b}l\right\rangle, L\right)$ by an element in $\hat{X}$. In particular, the dimension of these loci does not depend from the choice of the line bundle $L$ and we can introduce the following definition.
 \begin{defi}\label{def2.1}
- We say that $\mathcal{F}\langle \frac{a}{b}l\rangle$ is GV if $\codim V^i(X,\mathcal{F}\langle \frac{a}{b}l\rangle, L)\ge i$ for every $i\ge 1$.\par
-We say that $\mathcal{F}\langle \frac{a}{b}l\rangle$ is M-regular if $\codim V^i(X,\mathcal{F}\langle \frac{a}{b}l\rangle, L)\ge i+1$ for every $i\ge 1$.\par
-We say that a $\mathbb{Q}$-twisted sheaf $\mathcal{F}\langle \frac{a}{b}l\rangle$ satisfies I.T.(0) if its cohomological support loci are empty for every $i>0$. 
+ We say that $\mathcal{F}\left\langle \frac{a}{b}l\right\rangle$ is GV if $\codim V^i(X,\mathcal{F}\left\langle \frac{a}{b}l\right\rangle, L)\ge i$ for every $i\ge 1$.\par
+We say that $\mathcal{F}\left\langle \frac{a}{b}l\right\rangle$ is M-regular if $\codim V^i(X,\mathcal{F}\left\langle \frac{a}{b}l\right\rangle, L)\ge i+1$ for every $i\ge 1$.\par
+We say that a $\mathbb{Q}$-twisted sheaf $\mathcal{F}\left\langle \frac{a}{b}l\right\rangle$ satisfies I.T.(0) if its cohomological support loci are empty for every $i>0$. 
 \end{defi}
 Clearly we have that I.T.(0), implies M-regular which implies GV. In \cite{Caucci} and \cite{Ito22} various property of GV, M-regular and I.T.(0) sheaves are proven. Of most interest for us will be how these property are preserved under taking tensor products:
 \begin{prop}[{\cite[Proposition 3.1, Theorem 3.2]{PP11},\cite[Prop. 3.4]{Caucci}}]\label{caucci}
@@ -256,7 +263,6 @@ does not depends from the choice of $p$. Following the work of Jiang--Pareschi a
  \end{equation}
   
 \section{Ampleness of Tautological Bundles}\label{sec3}
-%\sti{Background on tautological bundles and their ampleness goes here also k-jet ampleness}
 
 
 
@@ -305,7 +311,7 @@ where $M_V$ denotes the kernel of the evalutaion map $H^0(Z,V)\otimes\mathcal{O}
 \section{Projective Bundles on Abelian Varieties}\label{sec4}
 Before proceeding with the proof of our main results we recall our specific setting and introduce some notation. Let $(X,l)$ be a complex abelian variety and consider a vector bundle $E$ of rank $\mathfrak{r}$ on $X$ admitting a filtration
 \begin{equation}\label{eq:filtration}
-    0=E_1\subset E_2\subset\cdots\subset E_\mathfrak{r}=E,
+    0=E_0\subset E_1\subset E_2\subset\cdots\subset E_\mathfrak{r}=E,
 \end{equation}
 such that the quotients
 $\beta_t:=E_t/E_{t-1}$ lie in $\Pic^0(X)$, for every $t=1,\ldots,\mathfrak{r}$.
@@ -376,7 +382,7 @@ The proof of this result will take the reminder of this section. We start with t
     satisfies I.T.(0) for all $h\geq r+1$.
 \end{lemma}
 \begin{proof}
-   Since $\beta_t\otimes A$ has class equal to $\ell$, our assumptions warrant that $k(\ell)<\frac{r+1}{p+1}$, and in particular $M_{\beta_t\otimes A}\langle\frac{r+1}{p+1}\ell\rangle$ satisfy I.T.(0). By Proposition \ref{caucci}, powers $\left(M_{\beta_t\otimes A}\langle\frac{r+1}{p+1}\ell\rangle\right)^{\otimes k_t}$ satisfy I.T.(0). Now we write
+   Since $\beta_t\otimes A$ has class equal to $\ell$, our assumptions warrant that $k(\ell)<\frac{r+1}{p+1}$, and in particular $M_{\beta_t\otimes A}\left\langle\frac{r+1}{p+1}\ell\right\rangle$ satisfy I.T.(0). By Proposition \ref{caucci}, powers $\left(M_{\beta_t\otimes A}\left\langle\frac{r+1}{p+1}\ell\right\rangle\right)^{\otimes k_t}$ satisfy I.T.(0). Now we write
    \begin{align*}
        M_{\beta_1\otimes A}^{\otimes k_1}\otimes \cdots\otimes M_{\beta_{\mathfrak{r}}\otimes A}^{\otimes k_\mathfrak{r}}\langle h\ell\rangle
        &= M_{\beta_1\otimes A}^{\otimes k_1}\otimes \cdots\otimes M_{\beta_{\mathfrak{r}}\otimes A}^{\otimes k_\mathfrak{r}}\left\langle \left(\frac{(r+1)\cdot\sum k_t}{p+1}+h-\frac{(r+1)\cdot\sum k_t}{p+1}\right)\ell\right\rangle\\
@@ -388,11 +394,6 @@ The proof of this result will take the reminder of this section. We start with t
    
 Let us proceed with the proof of the second statement in Proposition \ref{prop:ITO}. 
    \begin{proof}[Proof of Proposition \ref{prop:ITO} (2)]  
-%   More generally, we claim that 
-%    \begin{equation}\label{eqn1rd}
-%    \bigotimes_{t=1}^{\mathfrak{r}}M_{\beta_t\otimes A}^{\otimes k_t}\otimes E^{\otimes u}\otimes \beta_{\mathfrak{r}}^{\otimes h-u}\otimes A^{\otimes h} \end{equation}
-%    satisfies I.T.(0) for $0\leq u\leq h$. 
-%    
   We prove this by induction on $u$. Let $\alpha\in \Pic^0(X)$ and set $u=0$. 
   By Lemma \ref{IT0Q}, we have that 
 \[H^k\left(X,\bigotimes_{t=1}^\mathfrak{r} M_{\beta_t\otimes A}^{\otimes k_t}\otimes (\beta_{\mathfrak{r}}\otimes A)^{\otimes h}\otimes\alpha\right)=0\]
@@ -402,14 +403,6 @@ $\bigotimes_{t=1}^\mathfrak{r} M_{\beta_t\otimes A}^{\otimes k_t}\otimes (\beta_
 We now assume that 
       \begin{equation}\label{eqn4.5}\bigotimes_{t=1}^{\mathfrak{r}}M_{\beta_t\otimes A}^{\otimes k_t}\otimes E^{\otimes u-1}\otimes \beta_{\mathrm{r}}^{\otimes h-u+1}\otimes A^{\otimes h} \end{equation}
       satisfies I.T.(0) for some $u\geq 1$.    
-%      We consider the following short exact sequence 
-%\begin{align*}
-%0\rightarrow \bigotimes_{t=1}^{\mathfrak{r}}M_{\beta_t\otimes A}^{\otimes k_t}\otimes E^{\otimes u-1}\otimes E_{\mathfrak{r}-1}\otimes \beta_{\mathrm{r}}^{\otimes h-u}\otimes A^{\otimes h}\longrightarrow \bigotimes_{t=1}^{\mathfrak{r}}M_{\beta_t\otimes A}^{\otimes k_t}\otimes E^{\otimes u}\otimes \beta_{\mathrm{r}}^{\otimes h-u}\otimes A^{\otimes h}\\
-%\longrightarrow \bigotimes_{t=1}^{\mathfrak{r}}M_{\beta_t\otimes A}^{\otimes k_t}\otimes E^{\otimes u-1}\otimes \beta_{\mathrm{r}}^{\otimes h-u+1}\otimes A^{\otimes h}\rightarrow 0.
-%\end{align*}
-%If $\bigotimes_{t=1}^{\mathfrak{r}}M_{\beta_t\otimes A}^{\otimes k_t}\otimes E^{\otimes u-1}\otimes E_{\mathfrak{r}-1}\otimes \beta_{\mathrm{r}}^{\otimes h-u}\otimes A^{\otimes h}$ satisfies I.T.(0), we have that $\bigotimes_{t=1}^{\mathfrak{r}}M_{\beta_t\otimes A}^{\otimes k_t}\otimes E^{\otimes u}\otimes \beta_{\mathfrak{r}}^{\otimes h-u}\otimes A^{\otimes h}$ is an extension of I.T.(0) sheaves and so it satisfies I.T.(0). 
-%Thus, it remains to show that $\bigotimes_{t=1}^{\mathfrak{r}}M_{\beta_t\otimes A}^{\otimes k_t}\otimes E^{\otimes u-1}\otimes E_{\mathfrak{r}-1}\otimes \beta_{\mathrm{r}}^{\otimes h-u}\otimes A^{\otimes h}$ satisfies I.T.(0) satisfies I.T.(0)
-%
 We will show the more general statement that all the vector bundles 
 \begin{equation}\label{eqn:2nd}
 \bigotimes_{t=1}^{\mathfrak{r}}M_{\beta_t\otimes A}^{\otimes k_t}\otimes E^{\otimes u-1}\otimes E_{s}\otimes \beta_{\mathrm{r}}^{\otimes h-u}\otimes A^{\otimes h}
@@ -437,13 +430,7 @@ satisfies I.T.(0) for some $s\geq 2$. We look at the short exact sequence
 As an extension of I.T.(0) sheaves, we can conclude that $\bigotimes_{t=1}^{\mathfrak{r}}M_{\beta_t\otimes A}^{\otimes k_t}\otimes E^{\otimes u}\otimes E_s\otimes\beta_{\mathrm{r}}^{\otimes h-u}\otimes A^{\otimes h}$ satisfies I.T.(0) by the induction hypothesis \eqref{eqn4.5} and \eqref{eqn4.6}. By taking $s=\mathfrak{r}$ from \eqref{eqn:2nd}, we have the statement \eqref{eqn1rd}.
   \end{proof}
 
-%The following is the direct result from Proposition \ref{prop:ITO} (2) by taking $u=h$ from \eqref{eqn1rd}.
-%
-%\begin{cor}
-% Let $(X,l)$ and $A$ as before. Consider a vector bundle $E$ on $X$ admitting a filtration \eqref{eq:filtration} with quotient $\beta_t:=E_t/E_{t-1}\in\Pic^0(X)$. Then the vector bundle 
-%       \[\bigotimes_{t=1}^r M_{\beta_t\otimes A}^{\otimes k_t}\otimes (E\otimes A)^{\otimes h} \]
-%          satisfies I.T.(0) when $\sum k_t\leq p+1$ and $h\geq r+1$.
-%\end{cor}
+
 
 
 
@@ -493,11 +480,6 @@ $
 \mathcal{I}_o\left\langle \frac{1}{p+2}\ell\right\rangle
 $ is M-regular,
  then $E\otimes A$ is a $(p+1)$-jet ample vector bundle on $X$. 
-% \item More generally, if 
-%$
-%\mathcal{I}_o\left\langle \frac{n}{p+2}l\right\rangle
-%$ is M-regular, then $E\otimes A^{\otimes n}$ is $(p+1)$-jet ample vector bundle on $X$ for $n\in\mathbb{N}$. 
-% \end{enumerate}
 \end{prop}
 
 
@@ -510,39 +492,19 @@ As a corollary, we have that $E\otimes A$ is globally generated if $
 \mathcal{I}_o\left\langle \frac{1}{2}\ell\right\rangle
 $ is M-regular. 
 
-%So, we have the following proposition, analogous to Proposition \ref{prop:4.2}.
-%
-%
-%
-%
-%
-%
-%\begin{prop}\label{prop:5.2}
-%If $
-%\mathcal{I}_o\left\langle \frac{n}{2}l\right\rangle
-%$ is M-regular
-% for $n\in\mathbb{N}$,
-% then $\mathcal{O}_Y(1)\otimes \pi^*A^{\otimes n}$ is very ample line bundle on $Y$.
-%\end{prop}
 
-%\begin{prop}[{\cite[Proposition 6.2]{Ito22}}]
-%Suppose that $\mathcal{I}_o\langle xl\rangle$ is M-regular for $x\in \mathbb{Q}, 0<x<1$. Let $B$ is an line bundle on $X$. If $B-\frac{mx}{1-x}L$ is ample or $m\geq 2$ and $B-\frac{mx}{1-x}L$ is nef, then 
-%\[
-%h^i(M_L^{\otimes m}\otimes B)=0
-%\] for $m\in\mathbb{Z},m\geq 1$.
-%\end{prop}
 
 Now, we investigate the $N_p$-property of projective bundles over an abelian variety $X$. 
 
 \begin{thm}\label{thm:5.4}
 Suppose $(Y,X,\pi)$ as before. 
 Let $A$ be an ample line bundle on $X$ with no base divisor. Let $p\geq 1$.
- If $\mathcal{I}_o\langle \frac{r+1}{p+r+2}\ell\rangle$ is M-regular, then $\mathcal{O}_Y(1)\otimes\pi^*A$ satisfies $N_p^r$-property.  
- In particular, if $\mathcal{I}_o\langle \frac{1}{p+2}\ell\rangle$ is M-regular, then $\mathcal{O}_Y(1)\otimes\pi^*A$ satisfies $N_p$ property. 
+ If $\mathcal{I}_o\left\langle \frac{r+1}{p+r+2}\ell\right\rangle$ is M-regular, then $\mathcal{O}_Y(1)\otimes\pi^*A$ satisfies $N_p^r$-property.  
+ In particular, if $\mathcal{I}_o\left\langle \frac{1}{p+2}\ell\right\rangle$ is M-regular, then $\mathcal{O}_Y(1)\otimes\pi^*A$ satisfies $N_p$ property. 
 \end{thm}
 \begin{proof}
- We consider ample line bundles $\beta_t\otimes A$ for $1\leq t\leq \mathfrak{r}$. Since $\mathcal{I}_o\langle\frac{r+1}{p+r+2}\ell\rangle$ is M-regular, $M_{\beta_t\otimes A}\langle\frac{r+1}{p+1}\ell\rangle$ is also M-regular for $1\leq t\leq\mathfrak{r}$ by \cite[Proposition 4.1]{Ito22}. 
- We take $k_1$ to be an integer greater than or equal to 2 such that $2\leq k_1\leq p+1$. Then by \cite[Proposition 6.2]{Ito22}, $M_{\beta_1\otimes A}^{\otimes k_1}\langle\frac{(r+1)\cdot k_1}{p+1}\ell\rangle$ is I.T.(0). We take any nonnegative integers $k_2,\ldots,k_{\mathfrak{r}}$ such that $\sum_tk_t\leq p+1$. By Proposition \ref{caucci}
+ We consider ample line bundles $\beta_t\otimes A$ for $1\leq t\leq \mathfrak{r}$. Since $\mathcal{I}_o\left\langle\frac{r+1}{p+r+2}\ell\right\rangle$ is M-regular, $M_{\beta_t\otimes A}\left\langle\frac{r+1}{p+1}\ell\right\rangle$ is also M-regular for $1\leq t\leq\mathfrak{r}$ by \cite[Proposition 4.1]{Ito22}. 
+ We take $k_1$ to be an integer greater than or equal to 2 such that $2\leq k_1\leq p+1$. Then by \cite[Proposition 6.2]{Ito22}, $M_{\beta_1\otimes A}^{\otimes k_1}\left\langle\frac{(r+1)\cdot k_1}{p+1}\ell\right\rangle$ is I.T.(0). We take any nonnegative integers $k_2,\ldots,k_{\mathfrak{r}}$ such that $\sum_tk_t\leq p+1$. By Proposition \ref{caucci}
  $\bigotimes_{t=2}^\mathfrak{r} \left(M_{\beta_t\otimes A}\left\langle\frac{r+1}{p+1}\ell\right\rangle\right)^{\otimes k_t}$ is M-regular, and thus GV. Recall that $\mathcal{O}_X\left\langle \left(h-\frac{(r+1)\cdot\sum k_t}{p+1}\right)\ell\right\rangle$ is GV for $h\geq r+1$ from the proof of Proposition \ref{IT0Q}. By Proposition \ref{caucci}, we have that    
 $M_{\beta_1\otimes A}^{\otimes k_1}\otimes M_{\beta_2\otimes A}^{\otimes k_2}\otimes\cdots\otimes M_{\beta_{\mathfrak{r}}\otimes A}^{\otimes k_\mathfrak{r}}\langle h\ell\rangle=\bigotimes_{t=1}^\mathfrak{r} \left(M_{\beta_t\otimes A}\left\langle\frac{r+1}{p+1}\ell\right\rangle\right)^{\otimes k_t}\otimes \mathcal{O}_X\left\langle \left(h-\frac{(r+1)\cdot\sum k_t}{p+1}\right)\ell\right\rangle$ satisfies I.T.(0) for all $h\geq r+1$. From the same arguments for Proposition \ref{prop:ITO}, we have that the vector bundle $M_{E\otimes A}^{\otimes j}\otimes (E\otimes A)^{\otimes h}$ satisfies I.T.(0) for all $h\geq r+1$ and for any $2\leq j\leq p+1$, where $j=\sum_tk_t$.
  
@@ -568,8 +530,8 @@ The following corollary is a generalization of the consequences presented in The
 Suppose $(Y,X,\pi)$ as before. 
 Let $A$ be an ample line bundle on $X$. Let $p\geq 1$.
 \begin{enumerate}
-\item If $\mathcal{I}_o\langle \frac{n}{p+2}\ell\rangle$ is M-regular, then $\mathcal{O}_Y(1)\otimes\pi^*A^{\otimes n}$ satisfies $N_p$-property. 
-\item If $\mathcal{I}_o\langle \frac{n(r+1)}{p+r+2}\ell\rangle$ is M-regular, then $\mathcal{O}_Y(1)\otimes\pi^*A^{\otimes n}$ satisfies $N_p^r$-property. 
+\item If $\mathcal{I}_o\left\langle \frac{n}{p+2}\ell\right\rangle$ is M-regular, then $\mathcal{O}_Y(1)\otimes\pi^*A^{\otimes n}$ satisfies $N_p$-property. 
+\item If $\mathcal{I}_o\left\langle \frac{n(r+1)}{p+r+2}\ell\right\rangle$ is M-regular, then $\mathcal{O}_Y(1)\otimes\pi^*A^{\otimes n}$ satisfies $N_p^r$-property. 
 \end{enumerate}
 \end{cor}
 
@@ -583,7 +545,7 @@ Let $p\geq 1$ be an integer. Let $A$ be an ample line bundle on $X$ with no base
 \end{enumerate}
 \end{cor}
 \begin{proof}
-(1) According to \cite[Remark 3.6]{PP04}, $L$ does not have a base divisor if and only if $\mathcal{I}_o\langle l\rangle$ is M-regular for $c_1(L)=l$. So, given $L=E_t/E_{t-1}\otimes A^{\otimes n}$ for $1\leq t\leq \mathfrak{r}$, if $A$ does not have a base divisor, then $\mathcal{I}_o\langle\frac{1}{p+2}l\rangle=\mathcal{I}_o\langle\frac{n}{p+2}\ell\rangle$ is M-regular if ${n}/({p+2})\geq 1$, where $c_1(A)=\ell$. Thus, we establish (1) using the same argument as in Theorem \ref{thm:5.4}. Similarly, the second statement (2) holds.
+(1) According to \cite[Remark 3.6]{PP04}, $L$ does not have a base divisor if and only if $\mathcal{I}_o\langle l\rangle$ is M-regular for $c_1(L)=l$. So, given $L=E_t/E_{t-1}\otimes A^{\otimes n}$ for $1\leq t\leq \mathfrak{r}$, if $A$ does not have a base divisor, then $\mathcal{I}_o\left\langle\frac{1}{p+2}l\right\rangle=\mathcal{I}_o\left\langle\frac{n}{p+2}\ell\right\rangle$ is M-regular if ${n}/({p+2})\geq 1$, where $c_1(A)=\ell$. Thus, we establish (1) using the same argument as in Theorem \ref{thm:5.4}. Similarly, the second statement (2) holds.
 \end{proof}
 
 We note that Corollary \ref{cor:5.5} (1) generalizes Corollary \ref{introcor1} when $p\geq 1$.
